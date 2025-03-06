@@ -10,10 +10,6 @@
 
 This is some code for a collectble item.
 '''C#
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class Cheesestrings : MonoBehaviour
 {
     private GameManager manager;
@@ -33,10 +29,6 @@ public class Cheesestrings : MonoBehaviour
 '''
 This is for a enemies taking damage
 '''C#
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class EnemyDamage : MonoBehaviour
 {
     public int damage;
@@ -53,10 +45,6 @@ public class EnemyDamage : MonoBehaviour
 '''
 Here is some for enemy movement.
 '''C#
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class EnemyMovement : MonoBehaviour
 {
     public Transform[] patrolPoints;
@@ -86,10 +74,6 @@ public class EnemyMovement : MonoBehaviour
 '''
 Here is some for the player movement.
 '''C#
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class PlatformMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
