@@ -1,16 +1,147 @@
-## Hi there 👋
+## Hi there I'm Zoë a second year software development games student👋
 
 <!--
-**PotatoTheBear/PotatoTheBear** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+- 🔭 I’m currently working on a Godot Project & looking for interships.
+- 🌱 I’m currently learning: C# & GDScript.
+- 😄 Pronouns: she/her
+- 🐻 Age: 23
+- 🍔 Hobby's: I love gaming, cooking, drawning, plants and working with animails.
+-->
 
-Here are some ideas to get you started:
+## Over here I will showcase some code I wrote for a simple 2D platform
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+<!-- This is some code for a collectble item.
+'''C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Cheesestrings : MonoBehaviour
+{
+    private GameManager manager;
+    // Start is called before the first frame update
+    void Start()
+    {
+        manager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+    }
+
+    // Update is called once per frame
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        manager.AddScore(1);
+        Destroy(gameObject);
+    }
+}
+'''
+-->
+<!-- This is for a enemies taking damage
+'''C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class EnemyDamage : MonoBehaviour
+{
+    public int damage;
+    public PlayerHealth playerHealth;
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            playerHealth.TakeDamage(damage);
+        }
+    }
+}
+'''
+-->
+<!-- Here is some for enemy movement.
+'''C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class EnemyMovement : MonoBehaviour
+{
+    public Transform[] patrolPoints;
+    public float moveSpeed;
+    public int patrolDestination;
+
+    private void Update()
+    {
+        if(patrolDestination == 0)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].position, moveSpeed * Time.deltaTime);
+            if (Vector2.Distance(transform.position, patrolPoints[0].position) < .2f)
+            {
+                patrolDestination = 1;
+            }
+        }
+        if (patrolDestination == 1)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, patrolPoints[1].position, moveSpeed * Time.deltaTime);
+            if (Vector2.Distance(transform.position, patrolPoints[1].position) < .2f)
+            {
+                patrolDestination = 0;
+            }
+        }
+    }
+}
+'''
+-->
+<!-- Here is some for the player movement.
+'''C#
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlatformMovement : MonoBehaviour
+{
+    [SerializeField] private float speed;
+    [SerializeField] private Transform[] patrolPoints;
+    [SerializeField] private float waitTime;
+    int currentPointIndex;
+    bool once;
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        if (transform.position != patrolPoints[currentPointIndex].position)
+        {
+            transform.position = Vector2.MoveTowards(transform.position,
+            patrolPoints[currentPointIndex].position, speed * Time.deltaTime);
+        }
+        else
+        {
+            if (once == false)
+            {
+                once = true;
+                StartCoroutine(Wait());
+            }
+        }
+    }
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(waitTime);
+        if (currentPointIndex + 1 < patrolPoints.Length)
+        {
+            currentPointIndex++;
+        }
+            currentPointIndex = 0;
+        }
+        once = false;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player"))
+        {
+            collision.transform.SetParent(transform);
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        collision.transform.SetParent(null);
+    }
+}
+'''
 -->
