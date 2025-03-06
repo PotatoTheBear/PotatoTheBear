@@ -1,16 +1,14 @@
 ## Hi there I'm Zoë a second year software development games student👋
 
-<!--
 - 🔭 I’m currently working on a Godot Project & looking for interships.
 - 🌱 I’m currently learning: C# & GDScript.
 - 😄 Pronouns: she/her
 - 🐻 Age: 23
 - 🍔 Hobby's: I love gaming, cooking, drawning, plants and working with animails.
--->
 
 ## Over here I will showcase some code I wrote for a simple 2D platform
 
-<!-- This is some code for a collectble item.
+This is some code for a collectble item.
 '''C#
 using System.Collections;
 using System.Collections.Generic;
@@ -33,8 +31,7 @@ public class Cheesestrings : MonoBehaviour
     }
 }
 '''
--->
-<!-- This is for a enemies taking damage
+This is for a enemies taking damage
 '''C#
 using System.Collections;
 using System.Collections.Generic;
@@ -54,8 +51,7 @@ public class EnemyDamage : MonoBehaviour
     }
 }
 '''
--->
-<!-- Here is some for enemy movement.
+Here is some for enemy movement.
 '''C#
 using System.Collections;
 using System.Collections.Generic;
@@ -88,8 +84,7 @@ public class EnemyMovement : MonoBehaviour
     }
 }
 '''
--->
-<!-- Here is some for the player movement.
+Here is some for the player movement.
 '''C#
 using System.Collections;
 using System.Collections.Generic;
@@ -144,4 +139,3 @@ public class PlatformMovement : MonoBehaviour
     }
 }
 '''
--->
