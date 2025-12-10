@@ -3,8 +3,8 @@
 - 🔭 I’m currently working on a Godot Project & looking for interships.
 - 🌱 I’m currently learning: C# & GDScript.
 - 😄 Pronouns: she/her
-- 🐻 Age: 23
-- 🍔 Hobby's: I love gaming, cooking, drawning, plants and working with animails.
+- 🐻 Age: 24
+- 🍔 Hobby's: I love gaming, cooking/baking, drawning, plants and working with animails.
 
 ## Over here I will showcase some code I wrote for a simple 2D platform
 
