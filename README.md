@@ -1,6 +1,6 @@
-## Hi there I'm Zoë a second year software development games student👋
+## Hi there I'm Zoë a third year software development games student👋
 
-- 🔭 I’m currently working on a Godot Project & looking for interships.
+- 🔭 I’m currently working on a tailwind website and a 3-d racing game.
 - 🌱 I’m currently learning: C# & GDScript.
 - 😄 Pronouns: she/her
 - 🐻 Age: 24
