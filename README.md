@@ -1,9 +1,9 @@
-## Hi there I'm Zoë a third year software development games student👋
+## Hi there I'm Zoë a fourth year software development games student👋
 
 - 🔭 I’m currently working on a tailwind website and a 3-d racing game.
 - 🌱 I’m currently learning: C# & GDScript.
 - 😄 Pronouns: she/her
-- 🐻 Age: 24
+- 🐻 Age: 25
 - 🍔 Hobby's: I love gaming, cooking/baking, drawning, plants and working with animails.
 
 ## Over here I will showcase some code I wrote for a simple 2D platform
